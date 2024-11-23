@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria CrownPet</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header class="index-header">
+        <div th:insert="recycle/navbar.html :: nav"></div>
+        <section class="index-header__section">
+            <div class="overlay">
+                <h5 class="text-light fw-6">
+                    <span style="background-color: red; border-radius: 10px; margin-right: 0.5rem;"
+                        class="text-light px-2 py-1">-50%</span>
+                    DESCUENTO
+                </h5>
+                <span class="index-header__section--title text-light fw-7" style="text-transform: uppercase;">3 Primeras
+                    <br> Consultas</span>
+                <p class="text-light">Regístrate para obtener este beneficio, además podrás comprar productos <br> e
+                    informarte por el bien de tu mascota</p>
+                <a href="#" class="index-header__section--btn mt-2 fw-7 shadow">Regístrate ahora <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+        </section>
+    </header>
+
+    <main class="index-main">
+        <section class="index-main__servicios my-5" th:fragment="fg_servicios">
+            <h1 class="text-center fw-7 pb-4">Nuestros <span class="textCeleste">Servicios</span></h1>
+            <div class="row mx-0 gap-3 justify-content-center">
+                <a class="col-12 col-md-5 col-lg-3 index-main__servicios__boxIcon text-center py-4 shadow" data-aos="fade-up">
+                    <i class="fa-solid fa-syringe index-main__servicios__boxIcon__borderIcons"></i>
+                    <h2>Vacunas</h2>
+                </a>
+                <a class="col-12 col-md-5 col-lg-3 index-main__servicios__boxIcon text-center py-4 shadow" data-aos="fade-up">
+                    <i class="fa-solid fa-eye index-main__servicios__boxIcon__borderIcons"></i>
+                    <h2>Diagnostico</h2>
+                </a>
+                <a class="col-12 col-md-5 col-lg-3 index-main__servicios__boxIcon text-center py-4 shadow" data-aos="fade-up">
+                    <i class="fa-solid fa-file-waveform index-main__servicios__boxIcon__borderIcons"></i>
+                    <h2>Cirugia</h2>
+                </a>
+                <a class="col-12 col-md-5 col-lg-3 index-main__servicios__boxIcon text-center py-4 shadow" data-aos="fade-up">
+                    <i class="fa-solid fa-bone index-main__servicios__boxIcon__borderIcons"></i>
+                    <h2>Programas de Salud</h2>
+                </a>
+                <a class="col-12 col-md-5 col-lg-3 index-main__servicios__boxIcon text-center py-4 shadow" data-aos="fade-up">
+                    <i class="fa-solid fa-user-doctor index-main__servicios__boxIcon__borderIcons"></i>
+                    <h2>Consultoria Veterinaria</h2>
+                </a>
+                <a class="col-12 col-md-5 col-lg-3 index-main__servicios__boxIcon text-center py-4 shadow" data-aos="fade-up">
+                    <i class="fa-solid fa-dog index-main__servicios__boxIcon__borderIcons"></i>
+                    <h2>Comportamiento Animal</h2>
+                </a>
+            </div>
+        </section>
+        <section class="index-main__nosotros row mx-0 my-5 py-lg-5" th:fragment="fg_nosotros" data-aos="fade-up">
+            <div class="col-12 col-lg-6 mx-0 px-0 px-lg-4">
+                <img src="/img/img-index/img_sobre_nosotros.jpeg" class="img rounded">
+            </div>
+            <div class="col-12 col-lg-6 p-3 text-center text-lg-start">
+                <h1 class="text-light fw-7 index-main__nosotros--h1">Sobre Nosotros</h1>
+                <p class="index-main__nosotros--p pt-4 pb-4">En Crown Veterinaria, nos dedicamos a brindar el mejor
+                    cuidado y bienestar a las mascotas, tratándolas con la atención y el amor que merecen. Nuestro
+                    equipo de veterinarios altamente calificados y apasionados trabaja día a día para ofrecer servicios
+                    integrales, desde chequeos preventivos hasta tratamientos especializados. Con tecnología moderna y
+                    un enfoque en la comodidad y salud de cada animal, nos esforzamos por crear un ambiente cálido y
+                    seguro donde las mascotas y sus dueños se sientan como en casa. ¡Tu mascota es nuestra prioridad!
+                </p>
+                <a href="#" class="index-main__nosotros--a mt-1 text-center">Ver mas</a>
+            </div>
+        </section>
+        <section class="index-main__productos row mx-0 my-5" >
+            <div class="col-12 text-center pb-4">
+                <h1 class="fw-7">Productos <span class="textCeleste">Veterinarios</span></h1>
+            </div>
+            <a class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-decoration-none p-2" data-aos="fade-up">
+                <img src="/img/img-index/img-nosotros.jpg"
+                    class="img index-main__productos__profile-image-products rounded-circle shadow" alt="">
+                <h3 class="fw-6 mt-1 textCeleste">Medicina</h3>
+            </a>
+            <a class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-decoration-none p-2" data-aos="fade-up">
+                <img src="/img/img-index/img_ropa.jpg"
+                    class="img index-main__productos__profile-image-products rounded-circle shadow" alt="">
+                <h3 class="fw-6 mt-1 textCeleste">Ropa</h3>
+            </a>
+            <a class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-decoration-none p-2" data-aos="fade-up">
+                <img src="/img/img-index/img_comida.jpg"
+                    class="img index-main__productos__profile-image-products rounded-circle shadow" alt="">
+                <h3 class="fw-6 mt-1 textCeleste">Alimento</h3>
+            </a>
+            <a class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-decoration-none p-2" data-aos="fade-up">
+                <img src="/img/img-index/img_acce.jpeg"
+                    class="img index-main__productos__profile-image-products rounded-circle shadow" alt="">
+                <h3 class="fw-6 mt-1 textCeleste">Accesorios</h3>
+            </a>
+        </section>
+        <section class="index-main__especialidad row px-0 py-5 gap-3 justify-content-center">
+            <h1 class="fw-7 text-center py-4">Nuestras <span class="textCeleste">Especialidades</span></h1>
+            <div class="col-12 col-md-5 col-lg-3 index-main__especialidad--box--1 px-0 rounded" data-aos="fade-up-right">
+                <div class="overlayEspecialidad">
+                    <br> <br>
+                    <h1 class="text-start pt-5 px-2 text-light fw-7 ">Cirujano</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 index-main__especialidad--box--2 px-0 rounded" data-aos="fade-up">
+                <div class="overlayEspecialidad">
+                    <br> <br>
+                    <h1 class="text-start pt-5 px-2 text-light fw-7 ">Neurologo</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 index-main__especialidad--box--3 px-0 rounded" data-aos="fade-up-left">
+                <div class="overlayEspecialidad">
+                    <br> <br>
+                    <h1 class="text-start pt-5 px-2 text-light fw-7 ">Dermatologo</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 index-main__especialidad--box--4 px-0 rounded" data-aos="fade-up-right">
+                <div class="overlayEspecialidad">
+                    <br> <br>
+                    <h1 class="text-start pt-5 px-2 text-light fw-7 ">Oftalmologo</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 index-main__especialidad--box--5 px-0 rounded" data-aos="fade-up"> 
+                <div class="overlayEspecialidad">
+                    <br> <br>
+                    <h1 class="text-start pt-5 px-2 text-light fw-7 ">Cardiologo</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 index-main__especialidad--box--6 px-0 rounded" data-aos="fade-up-left">
+                <div class="overlayEspecialidad">
+                    <br> <br>
+                    <h1 class="text-start pt-5 px-2 text-light fw-7 ">Oncologo</h1>
+                </div>
+            </div>
+        </section>
+        <section class="index-main__sedes mx-0 row my-5 px-lg-5" data-aos="fade-down" th:fragment="fg_sedes">
+            <h1 class="fw-7 text-center py-4">¡Visitanos <span class="textCeleste">en nuestras Sedes!</span></h1>
+            <div class="col-12 col-md-6 order-2 order-md-1 px-0">
+                <h1 class="text-center py-3 fw-6">Sedes en Lima</h1>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Sede Miraflores
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Ubicada en el corazón de Miraflores, nuestra clínica ofrece un
+                                fácil acceso desde las principales avenidas. Estamos en
+                                <code>Av. Pardo y Aliaga 123</code>, listos
+                                para atender a tu mascota con los mejores cuidados.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Sede San Borja
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Nuestra sede en San Borja, se encuentra en
+                                <code>Av. San Luis 456</code>, listos
+                                para atender a tu mascota con los mejores cuidados.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Sede San Miguel
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">En San Miguel, nos puedes encontrar en
+                                <code>Av. La Marina 789</code>, listos
+                                para atender a tu mascota con los mejores cuidados.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2 px-lg-5 px-0">
+                <img src="/img/img-index/sede-1.jpeg" class="img rounded">
+            </div>
+        </section>
+        <section class="servicios-main__perfilMascota mx-0 px-0 row" data-aos="fade-down">
+            <form class="servicios-main__perfilMascota__formulario col-5 p-5 m-5">
+                <h1 class="text-center fw-7 pb-4">Registra a tu <span class="textCeleste">Mascota <i
+                            class="fa-solid fa-dog"></i></span></h1>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="petName" placeholder="Nombre de la mascota" required>
+                    <label for="petName">Nombre (Mascota)</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="ownerLastName" placeholder="Apellidos del dueño"
+                        required>
+                    <label for="ownerLastName">Apellidos (Dueño)</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="ownerFirstName" placeholder="Nombres del dueño"
+                        required>
+                    <label for="ownerFirstName">Nombres (Dueño)</label>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">+51</span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="Número de teléfono"
+                            required>
+                        <label for="phoneNumber">Número de Teléfono</label>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-around">
+                    <button type="button" class="btn btn-danger" id="deleteButton"><i class="fa-solid fa-trash"></i>
+                        Borrar</button>
+                    <button type="button" class="btn btn-success" id="successButton"><i class="fa-solid fa-check"></i>
+                        Enviar</button>
+                </div>
+            </form>
+
+            <div class="modal" tabindex="-1" id="confirmationModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Confirmación</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="modalMessage">¿Estás seguro de que deseas continuar?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="confirmAction">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        </section>
+    </main>
+    <footer th:insert="recycle/footer.html"></footer>
+    <script src="/js/index.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

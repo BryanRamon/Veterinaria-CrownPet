@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg py-3 position-fixed top-0">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/inicio}">
+            <img src="/img/img-index/img-letra.png" alt="Logo" class="img-fluid" style="max-width: 150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-underline mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" th:href="@{/inicio}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/nosotros}">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/servicios}">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/especialidades}">Especialidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/productos}">Productos</a>
+                </li>
+            </ul>
+            <div class="nav-icons ms-auto my-3">
+                <a href="#" class="rounded-circle shadow">
+                    <i class="bi bi-bag-heart-fill fs-4"></i>
+                </a>
+                <a class="rounded-circle shadow" th:href="@{/ingresar}">
+                    <i class="bi bi-person-circle fs-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

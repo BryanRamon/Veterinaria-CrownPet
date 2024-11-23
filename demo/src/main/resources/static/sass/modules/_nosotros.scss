@@ -1,0 +1,32 @@
+.nosotros-header {
+    height: 450px;
+    width: 100%;
+    background-image: url(../../static/img/img-index/img_fondoBanner.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    &__section {
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        &--title {
+            padding-top: 4rem;
+            font-size: 5rem;
+        }
+        @media (max-width: 580px) {
+            &--title {
+                padding-top: 6rem;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.navbar {
+    background-color: $celeste; 
+    transition: background-color 0.3s; 
+}
+
+.navbar-toggler {
+    border: none;
+}

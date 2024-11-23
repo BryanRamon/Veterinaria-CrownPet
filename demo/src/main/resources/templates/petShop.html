@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria CrownPet</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Conexion a Animacion JS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header class="nosotros-header">
+        <div th:insert="recycle/navbar.html"></div>
+
+        <section class="nosotros-header__section">
+            <div class="overlay">
+                <h1 class="nosotros-header__section--title text-light fw-7 text-center">Bienvenidos al PetShop</h1>
+            </div>
+        </section>
+    </header>
+    <main class="py-5">
+        <section class="boxSearch py-3 px-4">
+            <div class="row container p-2">
+                <div class="col-12 px-0">
+                    <h2 class="text-center py-2 fontW">BUSCAR PRODUCTO</h2>
+                </div>
+                <form class=" col-12 row mx-0 px-0">
+                    <div class="col-12 col-md-6 col-lg-6 px-0">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre de producto">
+                            <label for="floatingInput">Nombre de producto</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mt-md-0 px-0 mt-2">
+                        <div class="form-floating">
+                            <select class="form-select form-select-sm w-100 p-2" aria-label="Small select example">
+                                <option selected>Seleccionar Categoria (Opcional)</option>
+                                <option value="1">Medicamentos</option>
+                                <option value="2">Alimentos</option>
+                                <option value="3">Ropa</option>
+                                <option value="4">Accesorios</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div
+                        class="col-12 col-lg-3 p-2 d-flex justify-content-between justify-content-lg-around mt-3 mt-lg-0">
+                        <button type="reset" class="btn btn-warning w-40">
+                            <i class="bi bi-trash"></i> Borrar
+                        </button>
+                        <button type="button" class="btn btn-success w-50">
+                            <i class="bi bi-search"></i> Buscar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="boxProductos d-flex justify-content-center row px-0 mx-0 mb-3">
+            <!-- Medicamentos -->
+            <div class="col-12 row px-0 mx-0" data-aos="fade-up">
+                <div class="col-12 text-center p-4 mb-3">
+                    <span class="fs-3 fontW">Medicamentos</span>
+                </div>
+                <div class="col-12 row gap-4 d-flex justify-content-center mx-0" id="card-container">
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Hepatin Pasta 60ml</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$40.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$37.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Trihepat 100ml</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$90.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$73.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Silimadrag 120ml</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$60.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$54.00</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Promazil Inyección 50ml</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$21.50</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$18.30</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Sanitol Pasta 60gr</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$37.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$31.80</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-primary">Ver más</button>
+                </div>
+            </div>
+            <!-- Alimentos -->
+            <div class="col-12 row px-0 mx-0" data-aos="fade-up">
+                <div class="col-12 text-center p-4 mt-3 mb-3">
+                    <span class="fs-3 fontW">Alimentos</span>
+                </div>
+                <div class="col-12 row gap-4 d-flex justify-content-center mx-0" id="card-container">
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/22.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Brit GF Cat 2kg</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$110.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$85.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/23.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Brit Vet Cat Lata 200g</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$22.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$13.70</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/19.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Brit Care Mini Chicken and Tuna</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$12.20</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$7.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/20.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Canbo Super Premium Lata 200g</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$23.50</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$15.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/21.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Canbo Adulto Raza Pequeña 6kg</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$70.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$65.40</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-primary">Ver más</button>
+                </div>
+            </div>
+            <!-- Ropa -->
+            <div class="col-12 row px-0 mx-0" data-aos="fade-up">
+                <div class="col-12 text-center p-4 mt-3 mb-3">
+                    <span class="fs-3 fontW">Ropa</span>
+                </div>
+                <div class="col-12 row gap-4 d-flex justify-content-center mx-0" id="card-container">
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/7.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Camisas Yikeyo</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$28.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$25.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Sueter de Invierno</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$25.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$20.80</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/9.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Abrigo Dulce Invierno</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$55.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$50.30</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/10.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Sueter rosa</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$40.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$35.70</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/11.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Casaca Peluche Rosa</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$40.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$37.00</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-primary">Ver más</button>
+                </div>
+            </div>
+            <!-- Accesorios -->
+            <div class="col-12 row px-0 mx-0" data-aos="fade-up">
+                <div class="col-12 text-center p-4  mt-3 mb-3">
+                    <span class="fs-3 fontW ">Accesorios</span>
+                </div>
+                <div class="col-12 row gap-4 d-flex justify-content-center mx-0" id="card-container">
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/12.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Zapatos Silicona Impermeable</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$17.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$14.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/13.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Transportadora Rosa Mediana</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$170.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$150.500</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/14.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Pechera Nylon</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$22.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$18.50</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/15.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Safa Cama Talla M</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$67.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$61.00</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 shadow" style="width: 15rem;">
+                        <img src="/img/img-products/16.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-5">Rascador de Gato</h5>
+                            <div class="boxProductos__priceContainer">
+                                <p class="boxProductos__priceContainer__priceOriginal">$110.00</p>
+                                <p class="boxProductos__priceContainer__priceOferta">$100.00</p>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button class="btn btn-primary decrement-button">-</button>
+                                <label class="counter-value">0</label>
+                                <button class="btn btn-primary increment-button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-primary">Ver más</button>
+                </div>
+            </div>
+        </section>
+        <section class="servicios-main__perfilMascota mx-0 px-0 row" data-aos="fade-up">
+            <div class="servicios-main__perfilMascota__slider col-12 overflow-hidden mx-0 mb-5 px-0 d-flex justify-content-center align-items-center">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner d-flex align-items-center">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="/img/img-index/slider1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="/img/img-index/slider2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="/img/img-index/slider1.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer th:insert="recycle/footer.html"></footer>
+    <script src="/js/index.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

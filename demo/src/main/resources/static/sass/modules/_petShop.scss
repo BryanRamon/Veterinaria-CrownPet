@@ -1,0 +1,39 @@
+.boxSearch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $fondo;
+}
+
+.boxProductos {
+    width: 100%;
+    &__priceContainer{
+        text-align: center;
+        margin-bottom: 1rem;
+        &__priceOriginal{
+            font-size: 0.875rem;
+            color: #888;
+            text-decoration: line-through;
+            margin: 0;
+        }
+        &__priceOferta{
+            font-size: 1.25rem;
+            color: #28a745;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}
+.card {
+    transition: transform 0.3s ease; 
+    transform: scale(1); 
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+}
